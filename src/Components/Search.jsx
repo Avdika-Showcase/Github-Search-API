@@ -8,7 +8,7 @@ import Repos from './Repositories';
 import Spinner from './Spinner';
 import NotFound from './NotFound';
 
-function Search() {
+const Search = () => {
   const [repos, setRepos] = React.useState([]);
   const [emptySearch, setEmptySearch] = React.useState(false);
 

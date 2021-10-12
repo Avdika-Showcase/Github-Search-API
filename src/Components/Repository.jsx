@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, RepositoryBody, Title, Description, Image } from '../Styles/RepositoryStyle';
 
-function Repository(props) {
+const Repository = (props) => {
   return (
     <Container>
       <a href={props.link}>

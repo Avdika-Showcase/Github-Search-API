@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Input, Button } from '../Styles/SearchFormStyle';
 
-function SearchForm(props) {
+const SearchForm = (props) => {
   const [value, setValue] = React.useState('');
 
   const changeValue = (event) => {

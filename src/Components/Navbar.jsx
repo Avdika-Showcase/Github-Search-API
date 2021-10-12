@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Nav, Ul, A } from '../Styles/NavbarStyle';
 
-function Navbar({ icon, title, location }) {
+const Navbar = ({ icon, title }) => {
   return (
     <Nav>
       <h2><i className={icon}></i> {title}</h2>
