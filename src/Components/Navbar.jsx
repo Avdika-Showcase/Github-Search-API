@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Nav, Ul, A } from '../Styles/NavbarStyle';
 
@@ -17,16 +16,6 @@ const Navbar = ({ icon, title }) => {
       </Ul>
     </Nav>
   )
-}
-
-Navbar.defaultProps = {
-  title: 'Github Repository Search',
-  icon: 'fab fa-github'
-}
-
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
 }
 
 export default Navbar;
