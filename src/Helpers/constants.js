@@ -9,3 +9,13 @@ export const helpText = {
   Topics: 'Find topics via various criteria. Results are sorted by best match.',
   Users: 'Find users via various criteria.'
 };
+
+export const baseUrl = {
+  Code: 'https://api.github.com/search/code?',
+  Commits: 'https://api.github.com/search/commits?',
+  Issues: 'https://api.github.com/search/issues?',
+  Labels: 'https://api.github.com/search/labels?',
+  Repositories: 'https://api.github.com/search/repositories?',
+  Topics: 'https://api.github.com/search/topics?',
+  Users: 'https://api.github.com/search/users?'
+};

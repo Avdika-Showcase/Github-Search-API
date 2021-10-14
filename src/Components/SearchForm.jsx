@@ -4,7 +4,6 @@ import { Input } from '../Styles/SearchFormStyle';
 import MyButton from './Button';
 
 const SearchForm = (props) => {
-  console.log(props);
   const [value, setValue] = useState('');
 
   const changeValue = (event) => {

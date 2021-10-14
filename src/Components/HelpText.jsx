@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { helpText } from '../Helpers/constants';
+import { WorkingAreaContext } from '../Contexts';
 
 const HelpText = () => {
+  const { criteria } = useContext(WorkingAreaContext);
+
   return (
-    <div>
-      <p>{helpText.Repositories}</p>
-    </div>
+    <p>{helpText[criteria]}</p>
   )
 }
 
-export default HelpText
+export default HelpText;
