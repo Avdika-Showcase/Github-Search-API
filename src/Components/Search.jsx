@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { trackPromise } from 'react-promise-tracker';
 
@@ -9,8 +9,8 @@ import Spinner from './Spinner';
 import NotFound from './NotFound';
 
 const Search = () => {
-  const [repos, setRepos] = React.useState([]);
-  const [emptySearch, setEmptySearch] = React.useState(false);
+  const [repos, setRepos] = useState([]);
+  const [emptySearch, setEmptySearch] = useState(false);
 
   const handleResult = result => {
     setRepos(result);
@@ -32,8 +32,6 @@ const Search = () => {
   return (
     <Container>
       <SearchForm
-        placeholder="Enter Repository Name"
-        buttonText="Search"
         onSubmit={value => searchRepos(value)}
       />
       { emptySearch && (<NotFound />) }

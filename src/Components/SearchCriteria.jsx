@@ -2,17 +2,17 @@ import React from 'react'
 
 import MyButton from './Button';
 import { SearchCriteriaMenu } from '../Styles/searchCriteriaMenuStyled';
+import { searchCriteriaBtnText } from '../Helpers/constants';
 
 const SearchCriteria = () => {
   return (
     <SearchCriteriaMenu>
-      <MyButton buttontext='Code'></MyButton>
-      <MyButton buttontext='Commits'></MyButton>
-      <MyButton buttontext='Issues and pull requests'></MyButton>
-      <MyButton buttontext='Labels'></MyButton>
-      <MyButton buttontext='Repositories'></MyButton>
-      <MyButton buttontext='Topics'></MyButton>
-      <MyButton buttontext='Users'></MyButton>
+      {searchCriteriaBtnText.map(item => (
+        <MyButton
+          key={Date.now() + searchCriteriaBtnText.indexOf(item)}
+          buttontext={item}
+        />
+      ))}
     </SearchCriteriaMenu>
   )
 }
