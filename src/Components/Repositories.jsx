@@ -3,7 +3,7 @@ import React from 'react';
 import Repo from './Repository';
 import { Container } from '../Styles/RepositoriesStyle';
 
-function Repositories(props) {
+const Repositories = (props) => {
   return (
     <Container>
       {props.items.map(item => (

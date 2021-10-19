@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Input, Button } from '../Styles/SearchFormStyle';
+import { Input } from '../Styles/SearchFormStyle';
+import MyButton from './Button';
 
-function SearchForm(props) {
-  const [value, setValue] = React.useState('');
+const SearchForm = (props) => {
+  const [value, setValue] = useState('');
 
   const changeValue = (event) => {
     setValue(event.target.value);
@@ -20,20 +21,19 @@ function SearchForm(props) {
   };
 
   return (
-    <div>
-      <form>
-        <Input
-          type="text"
-          placeholder={props.placeholder}
-          value={value}
-          onChange={changeValue}
-          autoComplete="off"
-        />
-        <Button onClick={event => { submitValue(event) }}>
-          {props.buttonText}
-        </Button>
-      </form>
-    </div>
+    <form>
+      <Input
+        type="text"
+        placeholder={props.placeholder}
+        value={value}
+        onChange={changeValue}
+        autoComplete="off"
+      />
+      <MyButton
+        onClick={event => { submitValue(event) }}
+        buttontext={props.buttontext}
+      />
+    </form>
   )
 }
 
